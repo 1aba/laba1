@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.menu {
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.main {
+    list-style: none;
+}
+
+.main a {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.35s ease;
+}
+
+.main a:hover {
+    color: #ff8c00;
+}
+
+.main a:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ff8c00;
+}
+
+.main .education a {
+    color: #ff8c00; 
+}
+
+.content {
+    width: 85%;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img,
+.content img {
+    width: 30%;
+    border-radius: 10px;
+    margin:5px;
+}
+
+.content img {
+    border-radius: 10px; 
+}
+
+.info {
+    text-align: center;
+    font-size: 16px;
+}
+
+p {
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .menu,
+    .content {
+        width: 100%;
+    }
+}
